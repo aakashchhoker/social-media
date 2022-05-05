@@ -1,20 +1,20 @@
 .login{
     position: absolute;
-    left: 29.15%;
-    right: 39.38%;
+    left: 34.15%;
+    right: 32.38%;
     top: 7.42%;
     bottom: 5.96%;
+    height: 60%;
     /* background: #FAFAFA; */
-    /* box-shadow: 0px 0px 4px rgb(0 0 0 / 8%); */
-    border-radius: 30px;
-    width: 50%;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+   
 }
 
 .title{
     position: absolute;
-    left: 12.16%;
+    left: 18.16%;
     right: 74.66%;
-    top: 17%;
+    top: 23%;
     bottom: 83.69%;
     font-family: 'Poppins';
     font-style: normal;
@@ -71,7 +71,7 @@
     position: absolute;
     width: 35%;
     height: 35px;
-    left: 171px;
+    left: 140px;
     top: 400px;
     background: #0099fe;
     box-shadow: 0px 2px 4px rgb(251 111 187 / 30%);

@@ -11,6 +11,7 @@ const login = () => {
 
   return (
    <>
+   <div className="center">
    <div className={styles.login}>
     <h3 className={styles.title}> Welcome</h3>
     <p className={styles.p}>Welcome back! Please enter your details</p>
@@ -22,7 +23,8 @@ const login = () => {
     </Form>
     
    </div>
-<div style={{marginTop: '495px'}}>
+<div >
+   </div>
 <svg
           className="m-0 p-0 position-fixed left-0 bottom-0 w-100 right-0"
           xmlns="http://www.w3.org/2000/svg"

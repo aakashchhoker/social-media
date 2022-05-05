@@ -1,0 +1,81 @@
+.login{
+    position: absolute;
+    left: 29.15%;
+    right: 39.38%;
+    top: 7.42%;
+    bottom: 5.96%;
+    /* background: #FAFAFA; */
+    /* box-shadow: 0px 0px 4px rgb(0 0 0 / 8%); */
+    border-radius: 30px;
+    width: 50%;
+}
+
+.title{
+    position: absolute;
+    left: 12.16%;
+    right: 74.66%;
+    top: 17%;
+    bottom: 83.69%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 135.5%;
+    color: #2F2F2F;
+}
+
+
+.p{
+    position: absolute;
+    width: 285px;
+    height: 20.66px;
+    left: 100px;
+    top: 189px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9D9898;
+}
+
+
+.input_one{
+    position: absolute;
+    width: 57%;
+    height: 50px;
+    left: 85.59px;
+    top: 250px;
+    background: #ECECEC;
+    border-radius: 30px;
+    border-color: #ECECEC;
+    border: #ECECEC;
+    padding: 20px;
+    
+}
+
+.input_two{
+    position: absolute;
+    width: 57%;
+    height: 50px;
+    left: 85.59px;
+    top: 325px;
+    background: #ECECEC;
+    border-radius: 30px;
+    border-color: #ECECEC;
+    border: #ECECEC;
+    padding: 20px;
+}
+
+.button{
+    position: absolute;
+    width: 35%;
+    height: 35px;
+    left: 171px;
+    top: 400px;
+    background: #0099fe;
+    box-shadow: 0px 2px 4px rgb(251 111 187 / 30%);
+    border-radius: 30px;
+    border: #0099fe;
+    color: white;
+}

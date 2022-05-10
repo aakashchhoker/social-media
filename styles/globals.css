@@ -45,8 +45,38 @@ a {
   right: 0 !important;
 }
 
-.center{
+.center {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  margin-top: 15rem;
+}
+
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputD {
+  height: 50px;
+  background: #ECECEC;
+  border-radius: 30px;
+  border-color: #ECECEC;
+  border: #ECECEC;
+  padding: 20px;
+  width: 100%;
+  margin: 0.2rem
+}
+
+.buttonD {
+  height: 35px;
+  background: #0099fe;
+  box-shadow: 0px 2px 4px rgb(251 111 187 / 30%);
+  border-radius: 30px;
+  border: #0099fe;
+  color: white;
+  width: 100%;
+  margin: 0.2rem
 }

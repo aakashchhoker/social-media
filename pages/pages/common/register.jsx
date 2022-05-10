@@ -2,24 +2,21 @@ import { Form, Input, Button, Checkbox, message } from 'antd';
 import styles from './login.module.css'
 import Link from 'next/link';
 import axios from 'axios';
+import { addUser } from '../../api/hello';
 
 
 const register = () => {
   const onFinish = async (values) => {
     console.log('Success:', values);
 
-    await loginHere(values.username, values.password)
-
-
-  };
-
-  const loginHere = async (username, password) => {
-    await axios.post('http://localhost:1337/api/auth/local', {
-      identifier: username,
-      password: password,
+    addUser({
+      username: values.username,
+      password: values.password,
+      email: values.email
     }).then((res) => {
-      console.log('logged in , res', res)
-    }).catch((err) => console.log('error is', err))
+      console.log('user created successfullly', res)
+    }).catch((err) => { console.log('got an error', err) })
+
   }
 
   const onFinishFailed = (errorInfo) => {
@@ -29,9 +26,9 @@ const register = () => {
   return (
     <>
       <div className="center">
-        <div className={styles.login}>
-          <h3 className={styles.title}> Welcome</h3>
-          <p className={styles.p}>Welcome back! Please enter your details</p>
+        <div className='registerContainer'>
+          <h3 > Welcome</h3>
+          <p >Welcome back! Please enter your details</p>
 
           <Form
             name="basic"
@@ -46,20 +43,21 @@ const register = () => {
               name="username"
 
             >
-              <Input placeholder='Username' className={styles.input_one} />
+              <Input className='inputD' placeholder='Username' />
             </Form.Item>
 
             <Form.Item
               name="password"
             >
-              <Input className={styles.input_two} placeholder='Password' />
+              <Input className='inputD' placeholder='Password' />
+            </Form.Item>
+            <Form.Item
+              name="email"
+            >
+              <Input  className='inputD' placeholder='Email' />
             </Form.Item>
 
-
-            <Button className={styles.button} type="primary" htmlType="submit" > Login </Button>
-            <Link href="/pages/pages/common/register">
-              <Button className={styles.button} type="primary" htmlType="submit" > Sign Up</Button>
-            </Link>
+            <Button type="primary" className='buttonD' htmlType="submit" > Sign Up</Button>
           </Form>
 
         </div>

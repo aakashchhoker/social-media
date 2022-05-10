@@ -2,9 +2,15 @@ import { Form, Input, Button, Checkbox, message } from 'antd';
 import styles from './login.module.css'
 import Link from 'next/link';
 import axios from 'axios';
-
+import register from './register';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 const login = () => {
+  const router = useRouter()
+
+  const [user, setUser] = React.useState({})
+
   const onFinish = async (values) => {
     console.log('Success:', values);
 
@@ -18,20 +24,28 @@ const login = () => {
       identifier: username,
       password: password,
     }).then((res) => {
+      setUser(res)
       console.log('logged in , res', res)
-    }).catch((err) => console.log('User Not Found', err))
+    }).catch((err) => { setUser(null), console.log('User Not Found', err) })
   }
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
 
+  useEffect(() => {
+    if (user?.status === 200) {
+      router.push('/pages/dashboard')
+    }
+    else { router.push('/') }
+  }, [user])
+
   return (
     <>
       <div className="center">
-        <div className={styles.login}>
-          <h3 className={styles.title}> Welcome</h3>
-          <p className={styles.p}>Welcome back! Please enter your details</p>
+        <div className='registerContainer'>
+          <h3 > Welcome</h3>
+          <p >Welcome back! Please enter your details</p>
 
           <Form
             name="basic"
@@ -46,24 +60,25 @@ const login = () => {
               name="username"
 
             >
-              <Input placeholder='Username' className={styles.input_one} />
+              <Input className='inputD' placeholder='Username' />
             </Form.Item>
 
             <Form.Item
               name="password"
             >
-              <Input className={styles.input_two} placeholder='Password' />
+              <Input className='inputD' placeholder='Password' />
             </Form.Item>
 
+            <Button type="primary" htmlType="submit" className='buttonD' > Login </Button>
 
-            <Button className={styles.button} type="primary" htmlType="submit" > Login </Button>
-
+            <Link href={`/pages/common/register`} >
+              <Button className='buttonD'  >Register</Button>
+            </Link>
           </Form>
-
-
         </div>
         <div >
         </div>
+
         <svg
           className="m-0 p-0 position-fixed left-0 bottom-0 w-100 right-0"
           xmlns="http://www.w3.org/2000/svg"

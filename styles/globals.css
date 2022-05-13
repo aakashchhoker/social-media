@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 }
 
 a {
@@ -14,6 +15,7 @@ a {
 * {
   box-sizing: border-box;
   /* background-color: #0084b4 */
+  /* background-color: #E5E5E5; */
 }
 
 
@@ -45,16 +47,77 @@ a {
   right: 0 !important;
 }
 
-.center {
+.center{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-top: 15rem;
 }
 
-.registerContainer {
+
+.card{
+width: 840px;
+height: 910px;
+left: 355px;
+top: 374px;
+
+background: #FFFFFF;
+box-shadow: 0px -4px 4px rgba(202, 200, 200, 0.25), 0px 4px 4px rgba(202, 200, 200, 0.25);
+border-radius: 16px;
+}
+
+
+.center{
+  display: flex !important;
+  align-items: center !important;
+justify-content: center !important;
+}
+
+.card-img{
+  
+    width: 365px;
+    height: 435px;
+    margin-left: 45px;
+    border-radius: 4px;
+    margin-top: 30px;
+
+}
+
+.card_img{
+  width: 365px;
+  height: 435px;
+  margin-right: 45px;
+  border-radius: 4px;
+  margin-top: -10px;
+}
+
+.card--img{
+  
+    width: 365px;
+    height: 351px;
+    margin-right: 45px;
+    border-radius: 4px;
+
+}
+
+.p{
+  /* position: absolute; */
+  width: 100px;
+  height: 24px;
+  left: 765px;
+  top: 111px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(5, 5, 5, 0.5);
+
+
+color: rgba(5, 5, 5, 0.5);
+}
+
+.imgs_alings{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }

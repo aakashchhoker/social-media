@@ -19,7 +19,7 @@ const login = () => {
     <Form>
         <Input className={styles.input_one} placeholder="Username" />
         <Input className={styles.input_two} placeholder="password" />
-        <Button className={styles.button} type="primary" htmlType="submit" > Login </Button>
+        <Button className={styles.button} type="primary" htmlType="submit" ><a href="#">Login</a></Button>
     </Form>
     
    </div>
